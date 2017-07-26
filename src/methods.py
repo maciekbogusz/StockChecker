@@ -3,7 +3,22 @@ Created on 26.07.2017
 
 @author: Maciek
 '''
+from lxml import html
+import requests
+
+
 def get_data(
     stock
     ):
-    print(stock.name.lower())
+    lower_index = stock.name.lower()
+    page = requests.get('https://stooq.pl/q/?s='+lower_index)
+    tree = html.fromstring(page.content)
+    price = tree.xpath('//span[@id="aq_'+lower_index+'_c2|3"]/text()')
+    return price
+    
+def put_dictionary(
+        stock,
+        price
+        ):
+    #dict = 
+    print(stock.name, price)
