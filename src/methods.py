@@ -17,8 +17,8 @@ def get_data(
     return price
     
 def put_dictionary(
-        stock,
-        price
+        stock
         ):
-    #dict = 
-    print(stock.name, price)
+    name = stock.name
+    price = stock.price 
+    print(name, price)
