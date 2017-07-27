@@ -6,10 +6,12 @@ Created on 26.07.2017
 from methods import get_data, put_dictionary, print_dictionary
 from stock import Stock
 
-newStock = Stock('PXM')
-stockPrice =  get_data(newStock)
 
-newStock.setPrice(stockPrice)
-result = put_dictionary(newStock)
+myStocks = ['PXM', 'NTT', 'ABC']
 
-print_dictionary(result)
+for element in myStocks:
+    newStock = Stock(element)
+    stockPrice = get_data(newStock)
+    newStock.setPrice(stockPrice)
+    result = put_dictionary(newStock)
+    print_dictionary(result)

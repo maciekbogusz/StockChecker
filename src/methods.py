@@ -6,7 +6,6 @@ Created on 26.07.2017
 from lxml import html
 import requests
 
-
 def get_data(
     stock
     ):
