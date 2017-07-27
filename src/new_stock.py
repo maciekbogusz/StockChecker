@@ -7,7 +7,7 @@ from methods import get_data, put_dictionary, print_dictionary
 from stock import Stock
 
 
-myStocks = ['PXM', 'NTT', 'ABC']
+myStocks = ['PXM', 'NTT', 'ABC', 'BIO']
 
 for element in myStocks:
     newStock = Stock(element)
@@ -15,3 +15,5 @@ for element in myStocks:
     newStock.setPrice(stockPrice)
     result = put_dictionary(newStock)
     print_dictionary(result)
+    
+    

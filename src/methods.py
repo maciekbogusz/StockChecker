@@ -5,6 +5,7 @@ Created on 26.07.2017
 '''
 from lxml import html
 import requests
+from csv_writer import write_csv
 
 def get_data(
     stock
@@ -26,4 +27,5 @@ def put_dictionary(
 def print_dictionary(
             dictionary
         ):    
+   # write_csv(dictionary)
     print(dictionary)
