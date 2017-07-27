@@ -20,5 +20,11 @@ def put_dictionary(
         stock
         ):
     name = stock.name
-    price = stock.price 
-    print(name, price)
+    price = stock.getPrice() 
+    my_dictionary = [name, price]
+    return my_dictionary
+    
+def print_dictionary(
+            dictionary
+        ):    
+    print(dictionary)
