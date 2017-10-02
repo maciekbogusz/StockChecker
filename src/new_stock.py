@@ -15,5 +15,3 @@ for element in myStocks:
     newStock.setPrice(stockPrice)
     result = put_dictionary(newStock)
     print_dictionary(result)
-    
-    
